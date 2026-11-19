@@ -341,7 +341,7 @@ html{scroll-padding-top:96px}
  <tr><th>First-week viewing + renewals</th><td>Baseline to establish</td><td>Are we building a habit that makes families stay?</td></tr>
  <tr><th>AI, organic + YouTube → trial</th><td>Baseline to establish</td><td>Is the second engine starting to work?</td></tr>
  </tbody></table></div>
- <div class="truth-note"><b>Friday meeting, 20 minutes:</b> What went up? What went down? What gets more budget? What needs fixing? What new channel deserves another test? Compare actual net new households against the monthly path to 150,000.</div>
+ <div class="truth-note"><b>Friday meeting, 20 minutes:</b> What went up? What went down? What gets more budget? What needs fixing? What new channel deserves another test? Compare actual net new households against the monthly path to 150,000. <a href="#model" style="font-weight:850;color:#5030b5;text-decoration:underline">Try the optional calculator ↗</a></div>
 </section>
 <section id="execution" class="execution-section">
       <div class="shell">
@@ -387,7 +387,7 @@ html{scroll-padding-top:96px}
         <div class="table-scroll"><table id="channel-table"><thead><tr><th scope="col">Acquisition source</th><th scope="col">Budget / month</th><th scope="col">Cost / trial</th><th scope="col">Trial → paid %</th><th scope="col">Trials / month</th><th scope="col">New paid / month</th><th scope="col">Paid CAC</th></tr></thead><tbody id="channel-body"></tbody><tfoot><tr><th scope="row">All channels</th><td id="budget-total"></td><td>—</td><td>—</td><td id="trial-total"></td><td id="paid-total"></td><td id="cac-total"></td></tr></tfoot></table></div>
         <div class="table-hint">Leave channel conversion blank to use the default slider, or enter each channel’s actual conversion rate. Retention and scaling capacity should also be validated separately. Channel spend includes only the editable acquisition budget, not production or overhead unless entered.</div>
       </div>
-      <div class="milestone-grid" aria-live="polite"><div class="milestone"><span>MONTH 0</span><strong>40,000</strong><small>Verified starting point</small></div><div class="milestone"><span>YEAR 1</span><strong id="year1">—</strong><small>Model outcome</small></div><div class="milestone"><span>YEAR 2</span><strong id="year2">—</strong><small>Model outcome</small></div><div class="milestone"><span>YEAR 3</span><strong id="year3">—</strong><small>Against 150K goal</small></div></div>
+      <div class="milestone-grid" aria-live="polite"><div class="milestone"><span>MONTH 0</span><strong>40,000</strong><small>Reported starting point</small></div><div class="milestone"><span>YEAR 1</span><strong id="year1">—</strong><small>Model outcome</small></div><div class="milestone"><span>YEAR 2</span><strong id="year2">—</strong><small>Model outcome</small></div><div class="milestone"><span>YEAR 3</span><strong id="year3">—</strong><small>Against 150K goal</small></div></div>
       <p class="model-disclaimer">Model scope: 40,000 initial active households, 150,000 goal, 36 monthly periods. Constant monthly acquisition spend, cost per trial, conversion and churn. Does not model acquisition saturation, seasonality, cross-channel duplication, tier mix, or cohort-specific retention. Calculations are directional, not a business forecast; subscriber economics and available budget must be verified before any scale recommendation.</p>
     </section>
 
@@ -400,7 +400,7 @@ html{scroll-padding-top:96px}
   const START = 40000;
   const GOAL = 150000;
   const MONTHS = 36;
-  const KEY = 'ww-150k-example-v1';
+  const KEY = 'ww-150k-example-v2';
   const defaults = {
     churn: 3.55,
     conversion: 35,
