@@ -226,6 +226,68 @@ html{scroll-padding-top:96px}
 @media(max-width:800px){.facts-grid{grid-template-columns:repeat(2,1fr)}.now-grid,.engine-grid{grid-template-columns:1fr}.today-section,.engine-section,.scorecard-section,.discovery-section{padding-top:65px;padding-bottom:65px}}
 @media(max-width:600px){.facts-grid{gap:9px}.fact{padding:17px 12px}.fact strong{font-size:25px}.now-card,.engine{padding:25px 21px}.discovery-grid{grid-template-columns:1fr}.discovery-card:last-child{grid-column:auto}.proof{display:block}.proof>strong{display:block;margin-top:17px}.today-section h2,.engine-section h2,.discovery-section h2,.scorecard-section h2{font-size:37px;letter-spacing:-1px}.cost-line{font-size:12px}}
 </style>
+
+<style>
+/* 2026 strategy: subscriber math, sources, retention and cohort-aware scenario */
+html{scroll-padding-top:100px}
+.math-section,.flows-section{padding:90px 0}
+.math-section h2,.flows-section h2,.new-model-section h2{font-size:clamp(35px,4vw,54px);letter-spacing:-1.9px;line-height:1.12}
+.math-section h2 em,.flows-section h2 em,.new-model-section h2 em{font-style:normal;color:#5b43e4}
+.math-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:35px 0 22px}
+.math-tile{padding:30px 27px 27px;border:1px solid #e3ddf5;border-radius:18px;background:white}
+.math-tile>span{font-size:11px;font-weight:900;letter-spacing:1.15px;color:#6951b5;display:block}
+.math-tile>strong{display:block;font-size:clamp(39px,4vw,58px);font-weight:900;color:#3f2fa3;letter-spacing:-2px;margin:16px 0}
+.math-tile p{color:#685d7e;font-size:13px;line-height:1.65;margin:0}
+.math-tile p em{font-style:normal;color:#40318b;font-weight:750}
+.math-tile-feature{background:linear-gradient(145deg,#4934b9,#6045ed);border-color:#5543d5}
+.math-tile-feature>span,.math-tile-feature>strong,.math-tile-feature p,.math-tile-feature p em{color:white}
+.math-logic{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.math-logic>div{background:#f0ecff;border-radius:13px;padding:21px}
+.math-logic b{color:#392a91;font-size:14px;display:block;margin-bottom:8px}
+.math-logic span{font-size:13px;color:#61567a;line-height:1.6;display:block}
+.math-caution{border-left:4px solid #e39b42;padding:18px 20px;background:#fff8ed;color:#66577b;border-radius:9px;margin:22px 0;font-size:13px;line-height:1.65}
+.inline-jump{color:#543bd8;font-size:13px;font-weight:900;text-decoration:underline;text-underline-offset:4px}
+.flows-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:30px}
+.flows-grid article{background:#fff;border:1px solid #e8e1f6;border-radius:16px;padding:25px;min-width:0}
+.flows-grid article>span{font-size:11px;font-weight:900;color:#664bdd;letter-spacing:1px}
+.flows-grid h3{font-size:20px;letter-spacing:-.5px;color:#34256f;margin:15px 0 10px}
+.flows-grid p{font-size:13px;line-height:1.65;color:#665d7b}
+.flows-grid b{font-size:12px;line-height:1.5;color:#4a38a8;display:block;border-top:1px solid #eee9f5;padding-top:13px;margin-top:15px}
+.new-model-section{padding:90px 0}
+.new-model-section .scenario-banner{margin-top:30px}
+.calc-shell{display:grid;grid-template-columns:minmax(295px,.84fr) minmax(0,1.16fr);gap:18px}
+.calc-settings,.calc-output{background:white;border:1px solid #e7e2f4;border-radius:17px;padding:27px 26px;min-width:0}
+.calc-settings h3{font-size:23px;color:#36247b;letter-spacing:-.5px}
+.calc-settings label{display:block;font-size:13px;line-height:1.5;font-weight:750;color:#50446a;margin-top:15px}
+.calc-settings label small{display:block;font-size:11px;font-weight:500;color:#8b809c;margin-top:3px}
+.calc-settings input,.calc-settings select{width:100%;margin-top:7px;border-radius:8px;border:1px solid #dcd6ed;background:#fdfcff;color:#332869;font-size:16px;padding:11px 12px;font-family:inherit;min-height:44px}
+.calc-settings input:focus,.calc-settings select:focus{outline:2px solid #6f59e7}
+.calc-mini{font-size:11px;line-height:1.6;color:#7a708c;background:#f5f1ff;padding:12px;border-radius:8px;margin-top:11px}
+.calc-input-sep{font-size:11px;font-weight:900;letter-spacing:1.1px;color:#6749d8;border-top:1px solid #ebe5f7;padding-top:18px;margin-top:25px}
+.calc-output{background:#fcfaff}
+.calc-result-head>span{display:block;font-size:11px;font-weight:900;color:#6c58ad;letter-spacing:1.3px}
+.calc-result-head>strong{font-size:clamp(42px,5vw,63px);letter-spacing:-2px;color:#3c2caa;display:block;margin:11px 0 5px}
+.calc-result-head>p{font-size:13px;font-weight:800;color:#6b6084;margin:0}
+.calc-meter{height:11px;border-radius:30px;background:#e5def7;margin:21px 0 28px;overflow:hidden}
+.calc-meter>div{height:100%;width:0;background:linear-gradient(90deg,#573ddc,#ef37a1);transition:width .15s}
+.calc-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.calc-stats>div{border:1px solid #e9e3f5;border-radius:11px;padding:17px;background:white;min-width:0}
+.calc-stats small{font-size:11px;color:#82768f;display:block;line-height:1.5}
+.calc-stats strong{font-size:clamp(20px,2.25vw,28px);color:#34258a;display:block;letter-spacing:-.5px;margin-top:7px}
+.calc-graph{background:white;border:1px solid #eee8f7;border-radius:12px;padding:19px;margin-top:20px}
+.calc-graph h3{font-size:18px;color:#34256f;margin:0 0 15px}
+.calc-graph svg{width:100%;height:auto;display:block}
+.calc-legend{display:flex;gap:22px;margin-top:9px;font-size:11px;color:#685c81}
+.calc-legend i{width:20px;height:3px;display:inline-block;vertical-align:middle;margin-right:7px}
+.legend-a{background:#6048e9}.legend-b{background:#ef9d3e}
+.calc-summary{font-size:12px;line-height:1.65;background:#f1edff;color:#5f527e;border-radius:9px;padding:15px;margin-top:18px}
+.math-section .proposal-lead,.flows-section .proposal-lead,.new-model-section .proposal-lead{max-width:840px}
+.proof>strong small{display:block;font-size:11px;font-weight:600;letter-spacing:0;color:#807192;white-space:normal;line-height:1.5;text-align:right}
+.scorecard-section,.engine-section,.discovery-section,.flows-section,.math-section,.today-section,.new-model-section{scroll-margin-top:93px}
+@media(max-width:990px){.flows-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calc-shell{grid-template-columns:1fr}}
+@media(max-width:800px){.math-grid{grid-template-columns:1fr 1fr}.math-tile:last-child{grid-column:1/-1}.math-logic{grid-template-columns:1fr}.math-section,.flows-section,.new-model-section{padding:66px 0}}
+@media(max-width:600px){.math-grid,.flows-grid{grid-template-columns:1fr}.math-tile:last-child{grid-column:auto}.math-tile{padding:25px}.calc-settings,.calc-output{padding:23px 19px}.calc-stats{gap:8px}.calc-stats>div{padding:12px}.math-section h2,.flows-section h2,.new-model-section h2{font-size:36px}.proof>strong small{text-align:left}}
+</style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -236,12 +298,13 @@ html{scroll-padding-top:96px}
         <span><strong>WORLD WATCH · 150K</strong><small>Independent growth strategy</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Section navigation">
-        <a href="#today">Right now</a>
-        <a href="#strategy">The two engines</a>
-        <a href="#scorecard">Weekly scorecard</a>
-        <a href="#execution">First 90 days</a>
+        <a href="#math">The math</a>
+        <a href="#today">Today</a>
+        <a href="#strategy">Two engines</a>
+        <a href="#flows">Retention</a>
+        <a href="#model">Calculator</a>
       </nav>
-      <a class="nav-button" href="#strategy">See the plan <span aria-hidden="true">↗</span></a>
+      <a class="nav-button" href="#math">Start with the math <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
@@ -253,8 +316,8 @@ html{scroll-padding-top:96px}
           <h1>Keep what works.<br/><em>Build what’s next.</em></h1>
           <p class="hero-sub">A practical way to grow WORLD Watch from about <strong>40,000 to 150,000 households</strong>. Push the campaigns that already work, keep more subscribers, and build a second engine through AI, search and YouTube.</p>
           <div class="hero-actions">
-            <a class="button-primary" href="#today">Start with the numbers <span aria-hidden="true">↗</span></a>
-            <a class="button-outline" href="#strategy">See the two engines <span aria-hidden="true">↓</span></a>
+            <a class="button-primary" href="#math">Start with the math <span aria-hidden="true">↗</span></a>
+            <a class="button-outline" href="#strategy">The two growth engines <span aria-hidden="true">↓</span></a>
           </div>
           <p class="hero-foot">Reported WORLD Watch numbers. Any assumptions in the optional calculator are clearly labeled.</p>
         </div>
@@ -277,292 +340,284 @@ html{scroll-padding-top:96px}
     </section>
 
     
-<section class="definition-strip" aria-label="Growth strategy in plain English"><div class="shell definition-grid"><div class="definition-icon" aria-hidden="true">✳</div><p><strong>My approach:</strong> Keep feeding the channels that are already bringing in families. Make sure those families stick around. Meanwhile, give new families more ways to find WORLD Watch through Google, AI, YouTube and people they trust.</p><a href="#strategy">The plan ↗</a></div></section>
+
+<section id="math" class="section shell math-section">
+  <div class="proposal-number">01 / START WITH THE MATH</div>
+  <h2>Before anything else,<br/><em>here's what has to happen.</em></h2>
+  <p class="proposal-lead">The goal is to grow from about 40,000 subscribing households to 150,000. That means replacing everyone who leaves <strong>and</strong> bringing in enough new paying households to grow. Trials alone don't tell us whether we're doing either one.</p>
+  <div class="math-grid">
+    <article class="math-tile"><span>JUST TO HOLD 40K</span><strong>1,420</strong><p>Estimated new paying households needed each month to offset cancellations <em>at today's starting size</em>.</p></article>
+    <article class="math-tile math-tile-feature"><span>THE 36-MONTH GOAL</span><strong>6,785</strong><p>Paying households we'd need to add <em>every month</em>, assuming a constant 3.55% churn rate and level monthly additions.</p></article>
+    <article class="math-tile"><span>FASTER: 26 MONTHS</span><strong>7,829</strong><p>Paying households a month with the same assumptions, but a more aggressive deadline.</p></article>
+  </div>
+  <div class="math-logic"><div><b>The simple math</b><span>Starting households − cancellations + new paying households = ending households.</span></div><div><b>Why the growth target is bigger than it looks</b><span>At 150,000 households, 3.55% churn would mean about 5,325 cancellations per month. The number of people we have to replace rises as we grow.</span></div></div>
+  <p class="math-caution"><b>These are requirements, not a forecast.</b> They assume the roughly 40K starting figure is an active paying base, 3.55% churn applies to it, and paid additions are spread evenly. Seasonality, changes in churn, delayed trial conversions and retention by cohort could all change the path. The calculator below lets us test those assumptions.</p>
+  <a href="#model" class="inline-jump">Try the 26- or 36-month model ↗</a>
+</section>
+
 <section id="today" class="section shell today-section">
- <div class="proposal-number">01 / WHERE WE STAND</div><h2>There’s already a lot to <em>build on.</em></h2>
- <p class="proposal-lead">WORLD Watch has an established audience and Meta campaigns producing some promising acquisition costs. We don't need to start over. We need to find the winners, make the trials count, and add a new way for families to discover the show.</p>
- <div class="facts-grid">
-  <div class="fact"><strong>~40,000</strong><span>Households today</span></div>
-  <div class="fact"><strong>1,249</strong><span>New free trials / month</span></div>
-  <div class="fact"><strong>3.55%</strong><span>Monthly churn</span></div>
-  <div class="fact"><strong>27 months</strong><span>Average membership</span></div>
-  <div class="fact"><strong>$189</strong><span>Reported subscriber LTV</span></div>
- </div>
- <div class="now-grid">
-  <article class="now-card"><span class="mini-label">WHAT LOOKS PROMISING</span><h3>Meta is already bringing families in.</h3>
-  <p>Here's what Courtney shared. I'd keep testing the campaigns that show promise instead of turning off the current engine to chase the next shiny thing.</p>
-  <div class="cost-line"><span>Meta · 90-day remarketing offer</span><b>$8–$10 CPA</b></div>
-  <div class="cost-line"><span>Meta · free episode / 7-day trial</span><b>$8–$10 CPA</b></div>
-  <div class="cost-line"><span>Meta · back to school / 30-day offer</span><b>$19–$28 CPA</b></div>
-  <div class="cost-line"><span>Influencers and podcasts</span><b>~$60 CPA</b></div>
-  <small>CPA definition (trial or paying subscriber) still needs confirmation. The figures are reported campaign results, not verified paid CAC.</small>
-  </article>
-  <article class="now-card"><span class="mini-label">WHERE I SEE ROOM TO IMPROVE</span><h3>Getting families to stay is just as important.</h3>
-  <p>At about 40,000 households, a 3.55% monthly cancellation rate would mean roughly <b>1,420 cancellations a month</b>, assuming that rate applies to the full base. That's why I'd watch first-week viewing and retention, not just the signup number.</p>
-  <p><b>92.3%</b> of subscribers are monthly; just <b>7.7%</b> are annual. Courtney said choosing annual requires contacting member services. I'd explore whether making that choice easier can improve retention.</p>
-  <small>Reported marketing spend: $1.5 million. The time period and how much is WORLD Watch-specific still need confirming.</small>
-  </article>
- </div>
- <p class="truth-note"><b>Important:</b> 1,249 free trials are not the same as 1,249 paying subscribers. We still need trial-to-paid conversion and direct paid signups to know the full picture. That's a first-week question, not a reason to stall the plan.</p>
- <p class="fine-note">Reported WORLD Watch numbers. Any assumptions in the optional calculator are clearly labeled.</p>
+  <div class="proposal-number">02 / WHAT WORLD WATCH'S NUMBERS SAY TODAY</div>
+  <h2>A good starting point.<br/><em>A few important blanks.</em></h2>
+  <p class="proposal-lead">Courtney gave us enough to spot some promising opportunities. But I wouldn't label the acquisition numbers good or bad until I know how many trials become paying subscribers—and how many families subscribe without a trial.</p>
+  <div class="facts-grid">
+    <div class="fact"><strong>~40,000</strong><span>Starting households</span></div>
+    <div class="fact"><strong>1,249</strong><span>Free trials / month</span></div>
+    <div class="fact"><strong>3.55%</strong><span>Monthly churn</span></div>
+    <div class="fact"><strong>27 mo.</strong><span>Average membership</span></div>
+    <div class="fact"><strong>$189</strong><span>Reported LTV</span></div>
+  </div>
+  <div class="now-grid">
+    <article class="now-card">
+      <span class="mini-label">WHAT WE KNOW</span><h3>There is already an acquisition engine.</h3>
+      <p>Some Meta campaigns are reporting low acquisition costs. I'd start by understanding which campaigns bring in paying households who stick around, then build on those.</p>
+      <div class="cost-line"><span>Meta · 7-day free trial / episode</span><b>$8–$10 CPA</b></div>
+      <div class="cost-line"><span>Meta · 90-day remarketing</span><b>$8–$10 CPA</b></div>
+      <div class="cost-line"><span>Meta · 30-day back-to-school</span><b>$19–$28 CPA</b></div>
+      <div class="cost-line"><span>Podcast and influencer campaigns</span><b>~$60 CPA</b></div>
+      <p><strong>And retention matters.</strong> Most subscribers are monthly (92.3%). Only 7.7% are annual, and choosing annual requires contacting member services. That's worth exploring.</p>
+    </article>
+    <article class="now-card">
+      <span class="mini-label">WHAT WE STILL DON'T KNOW</span><h3>Free trials aren't paying subscribers.</h3>
+      <p>We have 1,249 average monthly free trials. If half convert, that's about <b>625 paying households</b> from those trials. At our assumed 40K active base, we'd still need roughly <b>795 more additions each month</b> from direct subscriptions, reactivations or other sources just to offset 1,420 cancellations.</p>
+      <p><strong>That's only a 50% conversion illustration.</strong> The actual rate is unknown. So are total monthly paid additions, the CPA definition, and whether the reported $1.5M spend covers a year and WORLD Watch alone.</p>
+      <p>We cannot conclude the subscriber base is shrinking based on trials alone. There could be other paid signup sources. I'd settle these questions in the first week, not turn this presentation into a data audit.</p>
+    </article>
+  </div>
+  <div class="truth-note"><b>My takeaway:</b> Find the true trial-to-paid rate, identify every source of paying households, and check how quickly we're replacing cancellations. That tells us how much more acquisition—or retention improvement—we really need.</div>
+  <p class="fine-note">Reported WORLD Watch numbers. Any assumptions in the optional calculator are clearly labeled.</p>
 </section>
+
 <section id="strategy" class="section shell engine-section">
- <div class="proposal-number">02 / WHAT I'D DO NEXT</div><h2>Two growth engines.<br/><em>Running together.</em></h2>
- <p class="proposal-lead">I don't want six channels just so we can say we have six channels. I want the proven campaigns working hard while we build the next source of subscribers.</p>
- <div class="engine-grid">
- <article class="engine engine-a"><span class="engine-label">ENGINE 1 · PUSH WHAT WORKS</span><h3>More of the right subscribers. Less wasted spend.</h3>
- <p>Meta already looks promising. I'd keep the winners going, but score each campaign by households that pay and stay—not the cheapest trial.</p>
- <ul><li>Compare the 7-, 30- and 90-day offers by actual paid conversion and retention.</li><li>Help families watch their first episode right away with simple onboarding.</li><li>Use existing WORLD newsletters, readers and shows to reach more good-fit families.</li><li>Keep podcasts and influencers where the full subscriber economics make sense.</li></ul><a href="#scorecard">Here's how we'd measure it ↗</a></article>
- <article class="engine engine-b"><span class="engine-label">ENGINE 2 · BUILD WHAT'S NEXT</span><h3>Get discovered by families who haven't heard of WORLD Watch.</h3>
- <p>Parents ask Google and AI for news resources for their kids. They also look on YouTube. WORLD Watch already creates strong video content—we can put it to work in new places.</p>
- <ul><li>Build helpful pages that answer the questions parents and teachers really ask.</li><li>Earn recommendations from homeschool, parenting and education websites.</li><li>Turn selected episodes into searchable YouTube clips and Shorts.</li><li>Start small, track qualified signups, and grow what proves itself.</li></ul><a href="#discovery">The AI + organic playbook ↗</a></article>
- </div>
+  <div class="proposal-number">03 / TWO GROWTH ENGINES, AT THE SAME TIME</div>
+  <h2>Push what's working.<br/><em>Build what comes next.</em></h2>
+  <p class="proposal-lead">I'd spend most of my time making the existing acquisition engine better while putting steady, measured work into organic discovery. We don't need to promise the new channel will deliver a certain number. We do need to give it a real shot.</p>
+  <div class="engine-grid">
+    <article class="engine engine-a">
+      <span class="engine-label">ENGINE 1 · PAID / PARTNERS / OWNED AUDIENCES</span>
+      <h3>Get more paying households from channels we already know.</h3>
+      <p>Don't replace a campaign because its cost per trial looks high—or scale one just because it looks cheap. Follow it through to paid and retained subscribers.</p>
+      <ul>
+        <li><strong>Meta:</strong> compare the 7-, 30- and 90-day offers using paid conversion, 30/60/90-day retention and acquisition cost.</li>
+        <li><strong>Podcasts and influencers:</strong> use unique landing pages, tracked links and cohort results; double down on audiences that actually stay.</li>
+        <li><strong>Existing WORLD audiences:</strong> test relevant placements in newsletters, WORLD Magazine and other channels; measure incremental new WORLD Watch households.</li>
+        <li><strong>The welcome experience:</strong> get families watching quickly, then give them a reason to keep coming back.</li>
+      </ul>
+      <a href="#flows">Don't forget the subscriber journey ↗</a>
+    </article>
+    <article class="engine engine-b">
+      <span class="engine-label">ENGINE 2 · AI / GOOGLE / YOUTUBE / PARTNERSHIPS</span>
+      <h3>Build discovery that doesn't depend on buying every click.</h3>
+      <p>WORLD Watch already creates a lot of useful video content. That's a big head start. I'd make it easier for people—and search and AI systems—to find, understand and share that work.</p>
+      <ul>
+        <li><strong>Onsite:</strong> answer real parent and educator questions with useful pages, transcripts or summaries, and free-episode calls to action.</li>
+        <li><strong>Offsite:</strong> get mentioned by trusted homeschool, family and education publications through genuinely useful partnerships.</li>
+        <li><strong>YouTube:</strong> test searchable clips and Shorts from existing episodes, with clear links back to WORLD Watch.</li>
+        <li><strong>Measure:</strong> organic and AI referrals, free-episode viewers, trials and paying subscribers—not speculative CPA figures.</li>
+      </ul>
+      <a href="#discovery">My organic discovery tests ↗</a>
+    </article>
+  </div>
+  <p class="truth-note"><b>Different cost structures:</b> The paid engine needs cost-per-paying-subscriber and retention analysis. The organic engine mainly starts with staff time, editing and outreach—real sweat equity, not free traffic. I'd track those hours and actual signups, not make up a CPA or subscriber forecast.</p>
 </section>
+
 <section id="discovery" class="discovery-section">
- <div class="shell"><div class="proposal-number">03 / THE NEW OPPORTUNITY · AI + ORGANIC + YOUTUBE</div><h2>Make WORLD Watch <em>easier to find.</em></h2>
- <p class="proposal-lead">They already make a ten-minute news show every weekday. So I'd use content they have instead of asking the team to create a second news operation.</p>
- <div class="discovery-grid">
- <article class="discovery-card"><span>ON THE SITE</span><h3>Answer real questions.</h3><p>Start with the things a parent is actually looking for:</p><ul><li>“Good news for middle schoolers”</li><li>“Current events for homeschool families”</li><li>“How do I talk to my kids about the news?”</li></ul><p>Build a few genuinely useful, indexable pages. Use selected episode highlights, accurate summaries and family discussion prompts. Check titles, internal links, crawl access and video markup where it fits. Every page points toward a free episode or trial.</p><b>Measure: organic and AI referrals → free episodes → trials → paid.</b></article>
- <article class="discovery-card"><span>OFF THE SITE</span><h3>Earn real recommendations.</h3><p>I'd reach out to homeschool organizations, Christian parenting sites, educators and curriculum publishers with something useful—not a generic backlink request.</p><ul><li>Offer a strong free episode or a classroom discussion guide.</li><li>Find relevant educational resource lists and roundups.</li><li>Build a handful of genuine partnerships that introduce new families to the show.</li></ul><b>Measure: partner mentions, referral traffic and paid households.</b></article>
- <article class="discovery-card"><span>ON YOUTUBE</span><h3>Use the videos already being made.</h3><p>Test useful clips and Shorts from WORLD Watch stories that stand alone and make people want to see more.</p><ul><li>Use clear, searchable video titles and descriptions.</li><li>Test explainers and playlists for civics, science and history.</li><li>Send interested viewers to the relevant free episode or trial.</li></ul><b>Measure: engaged viewers → site visits → trials → paid.</b></article>
- </div>
- <div class="proof"><div><span class="mini-label">WHY I THINK THIS IS WORTH DOING</span><h3>I've seen a small AI channel turn into real revenue.</h3><p>At my client PackagingSupplies.com, AI referral sales grew from roughly $1K–$2K a month to over $10K a month about a year later. WORLD Watch is a different business, so I'm not promising the same result. But I've seen what can happen when we pay attention to this channel and put in the work.</p></div><strong>$1–2K <span>→</span> $10K+</strong></div>
- <p class="fine-note">The AI opportunity is a test, not a guarantee. Good SEO, useful content, credible mentions and accessible video matter; there's no magic schema that forces AI assistants to recommend a site.</p>
+ <div class="shell">
+  <div class="proposal-number">04 / WHAT I WOULD ACTUALLY TEST ORGANICALLY</div>
+  <h2>Put the content<br/><em>to work in more places.</em></h2>
+  <p class="proposal-lead">Not a giant new content operation. A focused test built around selected existing episodes, edited into things parents and teachers will actually search for.</p>
+  <div class="discovery-grid">
+   <article class="discovery-card"><span>ON THE SITE · SEARCH + AI</span><h3>Answer a specific need.</h3>
+    <p>Start with a handful of real questions: <strong>news for middle schoolers, current events for homeschool families, and how to talk about difficult news with kids.</strong></p>
+    <ul><li>Review which useful pages already exist; improve those before building duplicates.</li><li>Create a small set of original guides, accurate episode summaries, accessible video and family discussion prompts.</li><li>Check indexability, internal linking, headings, metadata and appropriate video structured data.</li><li>Lead to a relevant free episode, then measure the path to a trial and paid.</li></ul>
+    <b>First test: 5–10 high-quality pages; baseline their search visibility and conversion.</b>
+   </article>
+   <article class="discovery-card"><span>OFF THE SITE · REAL REFERENCES</span><h3>Get in front of trusted audiences.</h3>
+    <p>I'd build a list of relevant homeschool organizations, Christian parenting publishers, educators and curriculum resources.</p>
+    <ul><li>Offer a topical free episode or a genuinely useful classroom/family discussion guide.</li><li>Pitch specific useful resources to existing roundup pages and education newsletters.</li><li>Track placements and referrals, then see whether those families actually subscribe.</li><li>Avoid paid link exchanges and generic guest posts just to get a backlink.</li></ul>
+    <b>First test: 20 thoughtful outreach contacts and a small group of real partnerships.</b>
+   </article>
+   <article class="discovery-card"><span>YOUTUBE · ANOTHER FRONT DOOR</span><h3>Make existing videos discoverable.</h3>
+    <p>The team already produces weekday video. I'd test how much more we can get out of selected stories.</p>
+    <ul><li>Try useful standalone explainers, clips and Shorts from evergreen or relevant stories.</li><li>Write searchable titles, useful descriptions and clear playlists where topics fit.</li><li>Direct interested viewers to a related free episode, not just a general homepage.</li><li>Track views and returning viewers, but judge success by site visits, trials and paid subscriptions.</li></ul>
+    <b>First test: a consistent, manageable clip schedule with a monthly review.</b>
+   </article>
+  </div>
+  <div class="proof"><div><span class="mini-label">WHY I'D PUT REAL WORK INTO THIS</span><h3>I've seen organic discovery become meaningful revenue.</h3><p>For my client PackagingSupplies.com, AI/LLM referral sales are now around $12K a month and organic referral sales around $18K a month—roughly $30K combined, or about 10% of sales by my estimate. AI referrals were around $1K–$2K a month roughly a year earlier. WORLD Watch has a much more content-heavy product, which makes this especially interesting to test. But I wouldn't promise a bigger percentage or a growth curve until we see the data.</p></div><strong>$12K <span>+</span> $18K<small>AI / LLM + organic sales per month · client example</small></strong></div>
+  <p class="fine-note">These are attributed client sales, not proof of incremental lift or a forecast for WORLD Watch. Organic work has labor and production costs. Google's AI-search guidance still centers on useful, crawlable content; there is no special AI-only schema that guarantees visibility.</p>
  </div>
 </section>
+
+<section id="flows" class="section shell flows-section">
+ <div class="proposal-number">05 / KEEP FAMILIES LONGER, AND INCREASE THEIR VALUE</div>
+ <h2>Don't let the relationship<br/><em>stop at the signup.</em></h2>
+ <p class="proposal-lead">WORLD may already have some or all of these email and messaging sequences. Great—I'd start by seeing what exists and how it performs, then improve the gaps. The goal is better trial conversion, more viewing, fewer cancellations, and more value from families who already trust WORLD.</p>
+ <div class="flows-grid">
+  <article><span>01 · TRIAL WELCOME</span><h3>Get them to the first episode.</h3><p>Immediately send the easiest way to watch. Follow up with a great story or family discussion prompt. Help those who signed up but haven't watched yet.</p><b>Measure: first-episode starts, trial → paid.</b></article>
+  <article><span>02 · NEW MEMBER / POST-PURCHASE</span><h3>Help the new subscriber build a habit.</h3><p>After payment, show them where to watch, what to watch next and how to use WORLD Watch with kids. Later, introduce a genuinely relevant WORLD offer when appropriate.</p><b>Measure: viewing, retention, cross-sell revenue.</b></article>
+  <article><span>03 · REPEAT ENGAGEMENT / CROSS-SELL</span><h3>Give established members another reason to stay.</h3><p>Send useful episode roundups, relevant subject collections, seasonal homeschool resources and carefully chosen other WORLD products—not endless promotional emails.</p><b>Measure: return viewing, renewals, added revenue per household.</b></article>
+  <article><span>04 · AT-RISK / CANCEL SAVE</span><h3>Catch problems before a family leaves.</h3><p>Test a re-engagement message when viewing drops, billing reminders when payment fails, and a helpful cancellation feedback path. Explore a simpler annual upgrade if the software allows it.</p><b>Measure: recovered payments, saved subscriptions, churn.</b></article>
+  <article><span>05 · WINBACK</span><h3>Bring former members back.</h3><p>Split past subscribers by why they left. For the right families, send a timely story, new feature or back-to-school reminder—not the same generic discount to everyone.</p><b>Measure: reactivated paying households, second-term retention.</b></article>
+ </div>
+ <div class="truth-note"><b>Important distinction:</b> Selling an existing WORLD Watch household another WORLD product can improve overall customer lifetime value, but it does <em>not</em> count as a new WORLD Watch household toward 150K. Reactivated WORLD Watch subscribers can count as paid additions if they weren't already active.</div>
+</section>
+
 <section id="scorecard" class="section shell scorecard-section">
- <div class="proposal-number">04 / KEEP IT SIMPLE</div><h2>Every Friday, <em>we know where we stand.</em></h2>
- <p class="proposal-lead">I don't want a dashboard just to have a dashboard. I want a quick look that tells us what to do next week.</p>
- <div class="score-scroll"><table class="score"><thead><tr><th>What we track</th><th>Current starting point</th><th>What it tells us</th></tr></thead><tbody>
- <tr><th>New paying households</th><td>Confirm first week</td><td>Which channels are producing actual subscribers?</td></tr>
- <tr><th>Cancellations + net growth</th><td>3.55% monthly churn</td><td>Are we closer to 150K or falling behind?</td></tr>
- <tr><th>Trials → paid</th><td>1,249 trials/month; paid conversion TBD</td><td>Which offers turn interest into paying households?</td></tr>
- <tr><th>Acquisition cost by channel</th><td>Reported CPA: Meta $8–$28, partners ~$60</td><td>Where should the next dollar go?</td></tr>
- <tr><th>First-week viewing + renewals</th><td>Baseline to establish</td><td>Are we building a habit that makes families stay?</td></tr>
- <tr><th>AI, organic + YouTube → trial</th><td>Baseline to establish</td><td>Is the second engine starting to work?</td></tr>
+ <div class="proposal-number">06 / THE WEEKLY CHECK-IN</div>
+ <h2>Every Friday, <em>know what's moving.</em></h2>
+ <p class="proposal-lead">One scorecard. Nothing fancy. I'd compare the last four weeks to our target, see what's driving paying household growth, and pick the next week's moves.</p>
+ <div class="score-scroll"><table class="score"><thead><tr><th>Number</th><th>Starting point</th><th>Why it matters</th></tr></thead><tbody>
+  <tr><th>Active WORLD Watch households</th><td>~40,000 (confirm paid status)</td><td>Are we actually growing toward 150K?</td></tr>
+  <tr><th>Paid adds − cancellations</th><td>~1,420 cancellations/month if 3.55% applies to 40K</td><td>Show paid additions from trials, direct sales and winbacks separately. Net growth is the score.</td></tr>
+  <tr><th>Free trials → paid</th><td>1,249 trials/month; conversion unknown</td><td>Show the trial funnel by offer and source; avoid mistaking a lead for a subscriber.</td></tr>
+  <tr><th>Paid acquisition cost + retention</th><td>Reported Meta $8–$28 CPA; partner ~$60; definition TBD</td><td>Spend more on cohorts that pay and keep watching.</td></tr>
+  <tr><th>Viewing + subscriber flows</th><td>Baseline to measure</td><td>Did welcome, post-purchase, renewal and winback changes lift retention or value?</td></tr>
+  <tr><th>AI / search / YouTube / partners</th><td>Baseline to establish</td><td>Are content and outreach producing qualified visits, trials and real paid households?</td></tr>
  </tbody></table></div>
- <div class="truth-note"><b>Friday meeting, 20 minutes:</b> What went up? What went down? What gets more budget? What needs fixing? What new channel deserves another test? Compare actual net new households against the monthly path to 150,000. <a href="#model" style="font-weight:850;color:#5030b5;text-decoration:underline">Try the optional calculator ↗</a></div>
+ <div class="truth-note"><b>My Friday question:</b> What's working? What's not? Are we above or below the pace we need? What gets more time or money next week? <a href="#model" class="inline-jump">Then test the math in the calculator ↗</a></div>
 </section>
+
 <section id="execution" class="execution-section">
-      <div class="shell">
-        <div class="section-heading"><div><span class="kicker">05 / FIRST 90 DAYS</span><h2>Let's get it<br /><em>moving.</em></h2></div><p>Keep the good acquisition work going while we start building the organic engine. Then check what's actually working.</p></div>
-        <div class="timeline">
-          <article class="timeline-card"><div class="time-tag">DAYS 01–30</div><h3>Get the starting point right.</h3><p>Review Meta results and subscriber tracking, pick the strongest offers, and audit the site's search visibility. List the first ten parent and teacher questions worth answering.</p><div class="deliverable">OUTPUT <span>Weekly scorecard + first content list</span></div></article>
-          <article class="timeline-card"><div class="time-tag">DAYS 31–60</div><h3>Run both engines.</h3><p>Improve the best ads and trial welcome path. Publish the first useful search pages, release a few YouTube clips, and pitch valuable resources to relevant education and homeschool partners.</p><div class="deliverable">OUTPUT <span>Paid tests + organic experiments</span></div></article>
-          <article class="timeline-card"><div class="time-tag">DAYS 61–90</div><h3>Keep the winners. Fix the rest.</h3><p>Put more behind campaigns that create paying households who stick. Expand organic tests showing real engagement and qualified signups. Stop what isn't working.</p><div class="deliverable">OUTPUT <span>Next 90 days, based on results</span></div></article>
-        </div>
-      </div>
-    </section>
+ <div class="shell">
+  <div class="section-heading"><div><span class="kicker">07 / THE FIRST 90 DAYS</span><h2>Start small enough<br/><em>to learn quickly.</em></h2></div><p>Do the work, check what happened, and build from there. I'm not pretending to know every answer before seeing the actual numbers and current systems.</p></div>
+  <div class="timeline">
+   <article class="timeline-card"><div class="time-tag">DAYS 01–30</div><h3>Get the real baseline.</h3><p>Confirm active paid households, trials-to-paid, new paid by source, churn and CPA definitions. Review current Meta results and all subscriber flows. Audit existing search, AI and YouTube discovery before creating anything new.</p><div class="deliverable">OUTPUT <span>Clean weekly scorecard + prioritized tests</span></div></article>
+   <article class="timeline-card"><div class="time-tag">DAYS 31–60</div><h3>Run both engines.</h3><p>Improve one or two winning paid offers and the first-week welcome path. Publish a small batch of helpful search resources, test selected YouTube clips, and make targeted outreach to educators and homeschool publishers.</p><div class="deliverable">OUTPUT <span>Paid-cohort results + first organic tests</span></div></article>
+   <article class="timeline-card"><div class="time-tag">DAYS 61–90</div><h3>Keep what proves itself.</h3><p>Shift effort toward paid campaigns that create lasting members. Improve or stop weak tests. Expand organic topics, partners and flows only if the engagement and subscriber results support it.</p><div class="deliverable">OUTPUT <span>Next 90-day plan grounded in actual results</span></div></article>
+  </div>
+ </div>
+</section>
 
-    <section id="model" class="section shell model-section">
-      <div class="section-heading"><div><span class="kicker">06 / OPTIONAL CALCULATOR</span><h2>Want to test<br /><em>the math?</em></h2></div><p>This is a side tool, not the main plan. Change the example inputs to see how monthly additions and churn affect the three-year target.</p></div>
-      <div class="scenario-banner"><div><span class="scenario-indicator"></span><strong>SCENARIO TOOL — MOST INPUTS ARE EXAMPLES</strong><p>Monthly churn starts with WORLD Watch’s reported 3.55%. Conversion, budgets and channel cost-per-trial are examples, NOT actual WORLD Watch results. Changes stay in your browser.</p></div><button id="reset-scenario" class="button-small" type="button">Reset example</button></div>
-      <div class="model-main">
-        <div class="model-controls">
-          <div class="control-head"><h3>Growth assumptions</h3><span>36 months</span></div>
-          <label for="churn"><span>Monthly churn <button type="button" class="info-dot" aria-label="Churn is the percent of active paying households that cancel in an average month" title="Percent of active paying households that cancel in an average month">?</button></span><output for="churn" id="churn-label">3.55%</output></label>
-          <input id="churn" type="range" min="0" max="6" step="0.05" value="3.55" />
-          <div class="input-endpoints"><span>0%</span><span>6%</span></div>
-          <label for="conversion"><span>Default trial → paid conversion</span><output for="conversion" id="conversion-label">35%</output></label>
-          <input id="conversion" type="range" min="5" max="80" step="1" value="35" />
-          <div class="input-endpoints"><span>5%</span><span>80%</span></div>
-          <div class="mini-equation"><strong>Monthly paid additions</strong><span>= total trials × trial conversion</span></div>
-          <div class="mini-equation"><strong>Next month's subscribers</strong><span>= current × (1 − churn) + new paid</span></div>
-          <div class="model-actions"><button id="download-scenario" class="button-small fill" type="button">Download assumptions ↓</button><button id="import-trigger" class="button-small" type="button">Load file ↑</button><input hidden id="import-file" type="file" accept="application/json,.json" /></div>
-        </div>
-        <div class="model-results">
-          <div class="results-head"><div><span>PROJECTED AT MONTH 36</span><strong id="projected-total">—</strong></div><div class="result-status" id="result-status">Calculating...</div></div>
-          <div class="progress-track"><div id="goal-progress"></div></div>
-          <div class="stat-grid">
-            <div class="stat"><small>New paid / month</small><strong id="new-paid">—</strong></div>
-            <div class="stat"><small>Required paid / month</small><strong id="needed-paid">—</strong></div>
-            <div class="stat"><small>Trials / month</small><strong id="monthly-trials">—</strong></div>
-            <div class="stat"><small>Monthly channel spend</small><strong id="monthly-spend">—</strong></div>
-          </div>
-          <div class="projection-chart"><div class="projection-top"><h3>Projected active households</h3><span>Illustrative, constant-input model</span></div><svg id="growth-chart" viewBox="0 0 640 240" role="img" aria-label="Projected subscriber count by month compared with the target growth path"></svg><div class="chart-legend"><span><i class="legend-projected"></i> Modeled</span><span><i class="legend-goal"></i> Goal trajectory</span></div></div>
-        </div>
-      </div>
-      <div class="channel-assumptions">
-        <div class="channel-assumptions-heading"><div><h3>Acquisition inputs by channel</h3><p>Change each channel's monthly investment and estimated cost per free trial.</p></div><span>Costs and conversion are illustrative</span></div>
-        <div class="table-scroll"><table id="channel-table"><thead><tr><th scope="col">Acquisition source</th><th scope="col">Budget / month</th><th scope="col">Cost / trial</th><th scope="col">Trial → paid %</th><th scope="col">Trials / month</th><th scope="col">New paid / month</th><th scope="col">Paid CAC</th></tr></thead><tbody id="channel-body"></tbody><tfoot><tr><th scope="row">All channels</th><td id="budget-total"></td><td>—</td><td>—</td><td id="trial-total"></td><td id="paid-total"></td><td id="cac-total"></td></tr></tfoot></table></div>
-        <div class="table-hint">Leave channel conversion blank to use the default slider, or enter each channel’s actual conversion rate. Retention and scaling capacity should also be validated separately. Channel spend includes only the editable acquisition budget, not production or overhead unless entered.</div>
-      </div>
-      <div class="milestone-grid" aria-live="polite"><div class="milestone"><span>MONTH 0</span><strong>40,000</strong><small>Reported starting point</small></div><div class="milestone"><span>YEAR 1</span><strong id="year1">—</strong><small>Model outcome</small></div><div class="milestone"><span>YEAR 2</span><strong id="year2">—</strong><small>Model outcome</small></div><div class="milestone"><span>YEAR 3</span><strong id="year3">—</strong><small>Against 150K goal</small></div></div>
-      <p class="model-disclaimer">Model scope: 40,000 initial active households, 150,000 goal, 36 monthly periods. Constant monthly acquisition spend, cost per trial, conversion and churn. Does not model acquisition saturation, seasonality, cross-channel duplication, tier mix, or cohort-specific retention. Calculations are directional, not a business forecast; subscriber economics and available budget must be verified before any scale recommendation.</p>
-    </section>
+<section id="model" class="section shell new-model-section">
+ <div class="proposal-number">08 / INTERACTIVE SUBSCRIBER MATH</div>
+ <h2>What would it take<br/><em>to reach 150K?</em></h2>
+ <p class="proposal-lead">Put in what we learn. This calculator follows active paying households month by month, subtracts churn, and adds paying subscribers from trials, direct/owned channels, organic discovery and winbacks. Use it to see the size of the gap—not to pretend we can forecast AI traffic.</p>
+ <div class="scenario-banner"><div><span class="scenario-indicator"></span><strong>SCENARIO, NOT A COMPANY FORECAST</strong><p>Starting households, reported trial count and churn begin with Courtney's figures. Trial conversion, paid spend, direct adds, organic gains and winbacks are adjustable <em>examples</em>. No actual organic CPA is assumed. Results are not saved or sent anywhere.</p></div><button type="button" class="button-small" id="calc-reset">Reset</button></div>
+ <div class="calc-shell">
+  <div class="calc-settings">
+   <h3>Change the assumptions</h3>
+   <label>Months to reach the goal<select id="calc-months"><option value="36">36 months · original goal</option><option value="26">26 months · faster plan</option></select></label>
+   <label>Starting active paying households<input type="number" id="calc-base" min="0" step="100" value="40000"/></label>
+   <label>Monthly subscriber churn (%)<input type="number" id="calc-churn" min="0" max="20" step="0.05" value="3.55"/></label>
+   <p class="calc-mini">At 3.55% churn, simple modeled average tenure is about 28 months; Courtney reported 27 months. Tenure isn't a separate knob here because it follows from the churn assumption.</p>
+   <div class="calc-input-sep">PAID ACQUISITION · TRIALS</div>
+   <label>New free trials in month 1<input type="number" id="calc-trials" min="0" step="1" value="1249"/></label>
+   <label>Trial → paid conversion (%) <small>Unknown · 35% example</small><input type="number" id="calc-conversion" min="0" max="100" step="1" value="35"/></label>
+   <label>Trial volume growth each month (%) <small>Example · 0% until proven</small><input type="number" id="calc-trialgrowth" min="-20" max="30" step="0.5" value="0"/></label>
+   <label>Estimated acquisition cost / trial ($) <small>Optional estimate · not reported paid CAC</small><input type="number" id="calc-cpt" min="0" max="10000" step="1" value="0"/></label>
+   <div class="calc-input-sep">OTHER SOURCES · NOT AUTOMATICALLY A CPA</div>
+   <label>Direct / owned-audience paid adds per month <small>Unknown · 0 placeholder</small><input type="number" id="calc-direct" min="0" step="10" value="0"/></label>
+   <label>Organic / AI / YouTube new paid in month 1 <small>Unknown · 0 placeholder</small><input type="number" id="calc-organic" min="0" step="10" value="0"/></label>
+   <label>Additional monthly organic paid adds each month <small>Sweat-equity ramp, not a forecast</small><input type="number" id="calc-ramp" min="0" step="5" value="0"/></label>
+   <label>Winback reactivations per month <small>Unknown · 0 placeholder</small><input type="number" id="calc-winback" min="0" step="10" value="0"/></label>
+  </div>
+  <div class="calc-output" aria-live="polite">
+   <div class="calc-result-head"><span id="calc-period">PROJECTED AFTER 36 MONTHS</span><strong id="calc-ending">—</strong><p id="calc-status">Calculating...</p></div>
+   <div class="calc-meter"><div id="calc-meter-fill"></div></div>
+   <div class="calc-stats">
+    <div><small>Break even in month 1</small><strong id="calc-break">—</strong></div>
+    <div><small>Constant paid adds / month needed</small><strong id="calc-required">—</strong></div>
+    <div><small>Modeled paid adds / month 1</small><strong id="calc-paid1">—</strong></div>
+    <div><small>Paid adds / final month</small><strong id="calc-paidlast">—</strong></div>
+    <div><small>Net growth / month 1</small><strong id="calc-net1">—</strong></div>
+    <div><small>Implied trial-acquisition spend / month 1</small><strong id="calc-spend">—</strong></div>
+   </div>
+   <div class="calc-graph"><h3>Paying households over time</h3><svg id="calc-svg" viewBox="0 0 640 265" role="img" aria-label="Scenario active paying households plotted against a straight-line target"></svg><div class="calc-legend"><span><i class="legend-a"></i>Scenario</span><span><i class="legend-b"></i>Goal path</span></div></div>
+   <p class="calc-summary" id="calc-explainer"></p>
+  </div>
+ </div>
+ <p class="model-disclaimer">This is a simplified planning exercise. Churn is applied monthly to the entire active base; trial conversions are credited in the same month; direct adds, organic additions and winbacks are separate and must not be double-counted. The model does not simulate trial delays, seasonality, source-specific retention, discounts, taxes, other WORLD product revenue or paid-channel saturation. The organic ramp is entirely hypothetical; its labor cost is not priced as a CPA. A zero in an unknown field means <em>not provided</em>, not that WORLD Watch actually receives zero. Reported WORLD Watch numbers. Any assumptions in the optional calculator are clearly labeled.</p>
+</section>
 
-    <section class="closing-section"><div class="shell closing-content"><div class="eyebrow light">THE WHOLE IDEA</div><h2>Keep what's working.<br/><em>Build what comes next.</em></h2><p>Get more of the right families, keep them watching, and let AI, Google, YouTube and trusted partners become another way people find WORLD Watch. Track it every week. Make the next move.</p><a href="#today" class="button-primary">Back to the starting point ↗</a></div></section>
+<section class="closing-section"><div class="shell closing-content"><div class="eyebrow light">THE WHOLE IDEA</div><h2>Know the math.<br/><em>Then go earn the growth.</em></h2><p>Scale the paid and partner channels that work. Keep more families watching through smart subscriber follow-up. Build AI, Google, YouTube and trusted partnerships as a second growth engine. Check our progress every week.</p><a href="#math" class="button-primary">Back to the math ↗</a></div></section>
     </main>
   <footer><div class="shell footer-wrap"><span>THE 150K PLAN · Independent growth strategy concept</span><span>Independent proposal, not an official WORLD site · Reported WORLD Watch numbers. Any assumptions in the optional calculator are clearly labeled.</span><a href="https://worldwatch.news/" target="_blank" rel="noopener noreferrer">Official WORLD Watch website ↗</a></div></footer>
-<script>/* WORLD Watch 150K strategy concept. All channel inputs below are examples, NOT WORLD data. */
-(() => {
-  'use strict';
-  const START = 40000;
-  const GOAL = 150000;
-  const MONTHS = 36;
-  const KEY = 'ww-150k-example-v2';
-  const defaults = {
-    churn: 3.55,
-    conversion: 35,
-    channels: [
-      { id: 'meta', name: 'Meta advertising', budget: 45000, costPerTrial: 12, conversionOverride: null },
-      { id: 'google', name: 'Google advertising', budget: 22000, costPerTrial: 14, conversionOverride: null },
-      { id: 'podcasts', name: 'Podcast sponsorships', budget: 45000, costPerTrial: 18, conversionOverride: null },
-      { id: 'creators', name: 'Creators & influencers', budget: 25000, costPerTrial: 13, conversionOverride: null },
-      { id: 'discovery', name: 'SEO & AI discovery', budget: 10000, costPerTrial: 8, conversionOverride: null },
-      { id: 'owned', name: 'Existing WORLD audiences', budget: 8000, costPerTrial: 4, conversionOverride: null }
-    ]
-  };
-  const el = id => document.getElementById(id);
-  const clone = obj => JSON.parse(JSON.stringify(obj));
-  const safeNumber = (value, fallback, min=0, max=1e9) => {
-    const n = Number(value);
-    return Number.isFinite(n) && n >= min && n <= max ? n : fallback;
-  };
-  const clean = obj => {
-    if (!obj || typeof obj !== 'object' || !Array.isArray(obj.channels)) throw Error('This is not a compatible scenario file.');
-    return {
-      churn: safeNumber(obj.churn, defaults.churn, 0, 6),
-      conversion: safeNumber(obj.conversion, defaults.conversion, 5, 80),
-      channels: defaults.channels.map(def => {
-        const raw = obj.channels.find(c => c && c.id === def.id) || {};
-        return {
-          ...def,
-          budget: safeNumber(raw.budget, def.budget, 0, 100000000),
-          costPerTrial: safeNumber(raw.costPerTrial, def.costPerTrial, 0.01, 1000000),
-          conversionOverride: raw.conversionOverride == null || raw.conversionOverride === '' ? null : safeNumber(raw.conversionOverride, defaults.conversion, 0, 100)
-        };
-      })
-    };
-  };
-  let state = clone(defaults);
-  try {
-    const stored = localStorage.getItem(KEY);
-    if (stored) state = clean(JSON.parse(stored));
-  } catch (_) { /* Local storage unavailable; site continues with example assumptions. */ }
-  const fmt = n => Math.round(n).toLocaleString('en-US');
-  const money = n => '$' + fmt(n);
-  const escapeAttr = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const channelBody = el('channel-body');
-
-  function buildInputs() {
-    el('churn').value = state.churn;
-    el('conversion').value = state.conversion;
-    channelBody.innerHTML = state.channels.map(ch => `
-      <tr data-channel="${ch.id}">
-        <th scope="row">${escapeAttr(ch.name)}</th>
-        <td><label class="currency-input"><span>$</span><input type="number" min="0" max="100000000" step="100" inputmode="decimal" value="${ch.budget}" data-edit="budget" aria-label="${escapeAttr(ch.name)} monthly budget" /></label></td>
-        <td><label class="currency-input"><span>$</span><input type="number" min="0.01" max="1000000" step="0.5" inputmode="decimal" value="${ch.costPerTrial}" data-edit="costPerTrial" aria-label="${escapeAttr(ch.name)} cost per trial" /></label></td>
-        <td><label class="currency-input"><input type="number" min="0" max="100" step="1" inputmode="decimal" placeholder="Default" value="${ch.conversionOverride ?? ''}" data-edit="conversionOverride" aria-label="${escapeAttr(ch.name)} trial-to-paid conversion percentage (blank for default)" /></label></td>
-        <td data-result="trials">—</td><td data-result="paid">—</td><td data-result="cac">—</td>
-      </tr>`).join('');
-    recalc();
-  }
-
-  function requiredMonthlyPaid(churnRate) {
-    const c = churnRate / 100;
-    if (!c) return (GOAL - START) / MONTHS;
-    const retentionTerm = Math.pow(1 - c, MONTHS);
-    return (GOAL - START * retentionTerm) * c / (1 - retentionTerm);
-  }
-  function project(newPaidPerMonth, churnRate) {
-    const result = [START];
-    for (let month = 1; month <= MONTHS; month++) {
-      result.push(Math.max(0, result[month - 1] * (1 - churnRate / 100) + newPaidPerMonth));
-    }
-    return result;
-  }
-  function chart(points) {
-    const svg = el('growth-chart');
-    const W = 640, H = 240, L = 48, R = 12, T = 18, B = 29;
-    const maxY = Math.max(GOAL, ...points) * 1.12;
-    const ceiling = Math.ceil(maxY / 25000) * 25000;
-    const X = m => L + m / MONTHS * (W - L - R);
-    const Y = value => T + (1 - value / ceiling) * (H - T - B);
-    const goal = Array.from({length: MONTHS + 1}, (_,m) => START + (GOAL-START) * m/MONTHS);
-    const pointsPath = arr => arr.map((v,i) => `${i?'L':'M'}${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
-    const projected = pointsPath(points);
-    const goalPath = pointsPath(goal);
-    const area = `${projected} L${X(MONTHS)},${Y(0)} L${X(0)},${Y(0)} Z`;
-    const steps = 4;
-    const guides = Array.from({length:steps+1},(_,i)=>{
-      const val=ceiling/steps*i, y=Y(val);
-      return `<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#e9e5f5" stroke-width="1"/><text x="${L-10}" y="${y+4}" text-anchor="end" fill="#827d9c" font-size="10">${Math.round(val/1000)}k</text>`;
-    }).join('');
-    const dates=[0,12,24,36].map(m=>`<text x="${X(m)}" y="${H-5}" text-anchor="middle" fill="#827d9c" font-size="11">${m===0?'Now':`Yr ${m/12}`}</text>`).join('');
-    svg.innerHTML = `<defs><linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8c7cff" stop-opacity=".32"/><stop offset="100%" stop-color="#8c7cff" stop-opacity=".02"/></linearGradient></defs>${guides}<path d="${area}" fill="url(#chart-fill)"/><path d="${goalPath}" fill="none" stroke="#ff9429" stroke-width="2.5" stroke-dasharray="6 6"/><path d="${projected}" fill="none" stroke="#5446ff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${X(36)}" cy="${Y(points[36])}" r="5" fill="#5446ff" stroke="white" stroke-width="2"/>${dates}`;
-  }
-  function recalc() {
-    el('churn-label').textContent = Number(state.churn).toFixed(2) + '%';
-    el('conversion-label').textContent = fmt(state.conversion) + '%';
-    let trials = 0, paid = 0, budget = 0;
-    state.channels.forEach(ch => {
-      const count = ch.costPerTrial > 0 ? ch.budget / ch.costPerTrial : 0;
-      const resultPaid = count * (ch.conversionOverride ?? state.conversion) / 100;
-      trials += count; paid += resultPaid; budget += ch.budget;
-      const row = channelBody.querySelector(`[data-channel="${ch.id}"]`);
-      if (row) {
-        row.querySelector('[data-result="trials"]').textContent = fmt(count);
-        row.querySelector('[data-result="paid"]').textContent = fmt(resultPaid);
-        row.querySelector('[data-result="cac"]').textContent = resultPaid > 0 ? money(ch.budget / resultPaid) : '—';
-      }
-    });
-    const needed = requiredMonthlyPaid(state.churn);
-    const projections = project(paid, state.churn);
-    const ending = projections[MONTHS];
-    el('projected-total').textContent = fmt(ending);
-    el('new-paid').textContent = fmt(paid);
-    el('needed-paid').textContent = fmt(needed);
-    el('monthly-trials').textContent = fmt(trials);
-    el('monthly-spend').textContent = money(budget);
-    el('budget-total').textContent = money(budget);
-    el('trial-total').textContent = fmt(trials);
-    el('paid-total').textContent = fmt(paid);
-    el('cac-total').textContent = paid > 0 ? money(budget/paid) : '—';
-    el('year1').textContent = fmt(projections[12]);
-    el('year2').textContent = fmt(projections[24]);
-    el('year3').textContent = fmt(ending);
-    el('goal-progress').style.width = Math.min(100, Math.max(0, ending/GOAL*100)) + '%';
-    const status = el('result-status');
-    status.classList.toggle('behind', ending < GOAL);
-    status.textContent = ending >= GOAL ? `On pace · +${fmt(ending-GOAL)} over goal` : `Short by ${fmt(GOAL-ending)} households`;
-    chart(projections);
-    try {localStorage.setItem(KEY, JSON.stringify(state));} catch (_) {}
-  }
-  el('churn').addEventListener('input',e=>{state.churn=Number(e.target.value);recalc();});
-  el('conversion').addEventListener('input',e=>{state.conversion=Number(e.target.value);recalc();});
-  channelBody.addEventListener('input',e=>{
-    const input = e.target.closest('input[data-edit]');
-    if (!input) return;
-    const id = input.closest('tr').dataset.channel;
-    const item = state.channels.find(c=>c.id===id);
-    if (!item) return;
-    if(input.dataset.edit==='conversionOverride' && input.value.trim()===''){ item.conversionOverride=null; recalc(); return; }
-    const v=Number(input.value);
-    if(!Number.isFinite(v)||v<0) return;
-    if(input.dataset.edit==='costPerTrial' && v===0) return;
-    item[input.dataset.edit]=Math.min(v,input.dataset.edit==='budget'?1e8:input.dataset.edit==='conversionOverride'?100:1e6);
-    recalc();
+<script>(function calcProgram(){
+ 'use strict';
+ const FIELDS=['months','base','churn','trials','conversion','trialgrowth','cpt','direct','organic','ramp','winback'];
+ const $=id=>document.getElementById(id);
+ const formatter=new Intl.NumberFormat('en-US',{maximumFractionDigits:0});
+ const fmt=n=>formatter.format(Math.round(n));
+ const usd=n=>'$'+fmt(n);
+ const GOAL=150000;
+ const initial={months:36,base:40000,churn:3.55,trials:1249,conversion:35,trialgrowth:0,cpt:0,direct:0,organic:0,ramp:0,winback:0};
+ function getState(){
+  const state={};
+  FIELDS.forEach(k=>{
+   const el=$('calc-'+k);
+   const num=Number(el.value);
+   const max=k==='churn'?20:k==='conversion'?100:k==='trialgrowth'?30:100000000;
+   const min=k==='trialgrowth'?-20:0;
+   state[k]=Number.isFinite(num)?Math.min(max,Math.max(min,num)):initial[k];
   });
-  el('reset-scenario').addEventListener('click',()=>{state=clone(defaults);buildInputs();});
-  el('download-scenario').addEventListener('click',()=>{
-    const obj={note:'WORLD Watch 150K illustration. Not verified company data.',...state};
-    const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});
-    const link=document.createElement('a');
-    const url=URL.createObjectURL(blob);
-    link.href=url;link.download='worldwatch-150k-scenario.json';document.body.appendChild(link);link.click();link.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),1000);
-  });
-  el('import-trigger').addEventListener('click',()=>el('import-file').click());
-  el('import-file').addEventListener('change',async e=>{
-    const file=e.target.files?.[0];
-    if(!file)return;
-    if(file.size>100000){alert('Please select a scenario JSON file smaller than 100KB.');return;}
-    try{state=clean(JSON.parse(await file.text()));buildInputs();}catch(err){alert('Unable to load that scenario: '+err.message);}
-    e.target.value='';
-  });
-  buildInputs();
-})();
-</script>
+  state.months=Number($('calc-months').value)===26?26:36;
+  return state;
+ }
+ function required(base,churn,n){
+  const c=churn/100;
+  if(c===0)return Math.max(0,(GOAL-base)/n);
+  const p=Math.pow(1-c,n);
+  return Math.max(0,(GOAL-base*p)*c/(1-p));
+ }
+ function calc(s){
+  let total=s.base;
+  const points=[total];
+  let paid1=0, paidlast=0, net1=0, t1=0, lastTrial=0, lastOrganic=0;
+  for(let month=1;month<=s.months;month++){
+   const trialVolume=s.trials*Math.pow(1+s.trialgrowth/100,month-1);
+   const trialPaid=trialVolume*s.conversion/100;
+   const organicPaid=s.organic+s.ramp*(month-1);
+   const adds=trialPaid+s.direct+organicPaid+s.winback;
+   const cancels=total*s.churn/100;
+   const net=adds-cancels;
+   if(month===1){paid1=adds;net1=net;t1=trialVolume;}
+   if(month===s.months){paidlast=adds;lastTrial=trialVolume;lastOrganic=organicPaid;}
+   total=Math.max(0,total+net);
+   points.push(total);
+  }
+  return{ending:total,points,paid1,paidlast,net1,t1,lastTrial,lastOrganic,need:required(s.base,s.churn,s.months)};
+ }
+ function graph(points,months){
+  const W=640,H=265,L=54,R=16,T=20,B=32;
+  const cap=Math.max(GOAL,...points)*1.12;
+  const ceil=Math.max(50000,Math.ceil(cap/25000)*25000);
+  const xx=m=>L+m/months*(W-L-R);
+  const yy=v=>T+(1-v/ceil)*(H-T-B);
+  const path=p=>p.map((v,i)=>(i?'L':'M')+xx(i).toFixed(1)+','+yy(v).toFixed(1)).join(' ');
+  const wanted=Array.from({length:months+1},(_,m)=>40000+(GOAL-40000)*m/months); // overwritten below to actual start
+  const st=points[0];
+  for(let i=0;i<wanted.length;i++)wanted[i]=st+(GOAL-st)*i/months;
+  let svg='<line x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-R)+'" y2="'+(H-B)+'" stroke="#e0daec"/>';
+  for(let j=0;j<=4;j++){
+   const v=j*ceil/4,y=yy(v);
+   svg+='<line x1="'+L+'" y1="'+y+'" x2="'+(W-R)+'" y2="'+y+'" stroke="#eae6f5"/><text x="'+(L-9)+'" y="'+(y+4)+'" text-anchor="end" font-size="10" fill="#8b829b">'+fmt(v/1000)+'k</text>';
+  }
+  svg+='<path d="'+path(wanted)+'" fill="none" stroke="#ef9d3e" stroke-width="2.5" stroke-dasharray="7 6"/>';
+  svg+='<path d="'+path(points)+'" fill="none" stroke="#6048e9" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>';
+  svg+='<circle cx="'+xx(months)+'" cy="'+yy(points[months])+'" r="5" stroke="white" stroke-width="2" fill="#6048e9"/>';
+  const labels=months===36?[0,12,24,36]:[0,6,13,19,26];
+  labels.forEach(m=>{svg+='<text x="'+xx(m)+'" y="'+(H-7)+'" text-anchor="middle" font-size="11" fill="#8b829b">'+(m===0?'Now':'Mo '+m)+'</text>';});
+  $('calc-svg').innerHTML=svg;
+ }
+ function recalc(){
+  const s=getState(),o=calc(s);
+  $('calc-period').textContent='PROJECTED AFTER '+s.months+' MONTHS';
+  $('calc-ending').textContent=fmt(o.ending);
+  const diff=o.ending-GOAL;
+  $('calc-status').textContent=diff>=0?'On pace: '+fmt(diff)+' households above goal':'Short of goal by '+fmt(-diff)+' households';
+  $('calc-break').textContent=fmt(s.base*s.churn/100);
+  $('calc-required').textContent=fmt(o.need);
+  $('calc-paid1').textContent=fmt(o.paid1);
+  $('calc-paidlast').textContent=fmt(o.paidlast);
+  $('calc-net1').textContent=(o.net1>=0?'+':'')+fmt(o.net1);
+  $('calc-spend').textContent=s.cpt>0?usd(s.trials*s.cpt):'Not entered';
+  $('calc-meter-fill').style.width=Math.max(0,Math.min(100,o.ending/GOAL*100))+'%';
+  const trialConv=fmt(s.trials*s.conversion/100);
+  $('calc-explainer').textContent='Month 1: '+fmt(s.trials)+' free trials × '+s.conversion+'% conversion = '+trialConv+' paying households from trials. Add '+fmt(s.direct)+' direct/owned, '+fmt(s.organic)+' organic and '+fmt(s.winback)+' winbacks; subtract '+fmt(s.base*s.churn/100)+' estimated cancellations. For '+s.months+' months, '+fmt(o.need)+' new paying households every month would be required with constant churn and flat additions. Any organic ramp you enter is hypothetical—not predicted.';
+  graph(o.points,s.months);
+ }
+ FIELDS.forEach(k=>$('calc-'+k).addEventListener(k==='months'?'change':'input',recalc));
+ $('calc-reset').addEventListener('click',()=>{FIELDS.forEach(k=>{$('calc-'+k).value=initial[k];});recalc();});
+ recalc();
+})();</script>
 </body>
 </html>
