@@ -491,7 +491,7 @@ html{scroll-padding-top:100px}
  <div class="proposal-number">08 / INTERACTIVE SUBSCRIBER MATH</div>
  <h2>What would it take<br/><em>to reach 150K?</em></h2>
  <p class="proposal-lead">Put in what we learn. This calculator follows active paying households month by month, subtracts churn, and adds paying subscribers from trials, direct/owned channels, organic discovery and winbacks. Use it to see the size of the gap—not to pretend we can forecast AI traffic.</p>
- <div class="scenario-banner"><div><span class="scenario-indicator"></span><strong>SCENARIO, NOT A COMPANY FORECAST</strong><p>Starting households, reported trial count and churn begin with Courtney's figures. Trial conversion, paid spend, direct adds, organic gains and winbacks are adjustable <em>examples</em>. No actual organic CPA is assumed. Results are not saved or sent anywhere.</p></div><button type="button" class="button-small" id="calc-reset">Reset</button></div>
+ <div class="scenario-banner"><div><span class="scenario-indicator"></span><strong>SCENARIO, NOT A COMPANY FORECAST</strong><p>Starting households, reported trial count and churn begin with Courtney's figures. Trial conversion, paid spend, direct subscribers, organic additions and winbacks are adjustable <em>examples</em>. No actual organic CPA is assumed. Results are not saved or sent anywhere.</p></div><button type="button" class="button-small" id="calc-reset">Reset</button></div>
  <div class="calc-shell">
   <div class="calc-settings">
    <h3>Change the assumptions</h3>
@@ -504,20 +504,20 @@ html{scroll-padding-top:100px}
    <label>Trial → paid conversion (%) <small>Unknown · 35% example</small><input type="number" id="calc-conversion" min="0" max="100" step="1" value="35"/></label>
    <label>Trial volume growth each month (%) <small>Example · 0% until proven</small><input type="number" id="calc-trialgrowth" min="-20" max="30" step="0.5" value="0"/></label>
    <label>Estimated acquisition cost / trial ($) <small>Optional estimate · not reported paid CAC</small><input type="number" id="calc-cpt" min="0" max="10000" step="1" value="0"/></label>
-   <div class="calc-input-sep">OTHER SOURCES · NOT AUTOMATICALLY A CPA</div>
-   <label>Direct / owned-audience paid adds per month <small>Unknown · 0 placeholder</small><input type="number" id="calc-direct" min="0" step="10" value="0"/></label>
-   <label>Organic / AI / YouTube new paid in month 1 <small>Unknown · 0 placeholder</small><input type="number" id="calc-organic" min="0" step="10" value="0"/></label>
-   <label>Additional monthly organic paid adds each month <small>Sweat-equity ramp, not a forecast</small><input type="number" id="calc-ramp" min="0" step="5" value="0"/></label>
-   <label>Winback reactivations per month <small>Unknown · 0 placeholder</small><input type="number" id="calc-winback" min="0" step="10" value="0"/></label>
+   <div class="calc-input-sep">NEW PAID SUBSCRIBERS BY ACQUISITION CHANNEL</div>
+   <label>New paid subscribers from direct / owned channels per month <small>Unknown · 0 placeholder</small><input type="number" id="calc-direct" min="0" step="10" value="0"/></label>
+   <label>New paid subscribers from organic / AI / YouTube in month 1 <small>Unknown · 0 placeholder</small><input type="number" id="calc-organic" min="0" step="10" value="0"/></label>
+   <label>Additional new organic subscribers each month <small>Fixed increase to monthly organic additions (not a percentage): 50 means 50 more than the preceding month; hypothetical, not a forecast</small><input type="number" id="calc-ramp" min="0" step="5" value="0"/></label>
+   <label>Former subscribers reactivated per month <small>Unknown · 0 placeholder</small><input type="number" id="calc-winback" min="0" step="10" value="0"/></label>
   </div>
   <div class="calc-output" aria-live="polite">
    <div class="calc-result-head"><span id="calc-period">PROJECTED AFTER 36 MONTHS</span><strong id="calc-ending">—</strong><p id="calc-status">Calculating...</p></div>
    <div class="calc-meter"><div id="calc-meter-fill"></div></div>
    <div class="calc-stats">
     <div><small>Break even in month 1</small><strong id="calc-break">—</strong></div>
-    <div><small>Constant paid adds / month needed</small><strong id="calc-required">—</strong></div>
-    <div><small>Modeled paid adds / month 1</small><strong id="calc-paid1">—</strong></div>
-    <div><small>Paid adds / final month</small><strong id="calc-paidlast">—</strong></div>
+    <div><small>Constant new paid subscribers / month needed</small><strong id="calc-required">—</strong></div>
+    <div><small>Modeled new paid subscribers / month 1</small><strong id="calc-paid1">—</strong></div>
+    <div><small>New paid subscribers / final month</small><strong id="calc-paidlast">—</strong></div>
     <div><small>Net growth / month 1</small><strong id="calc-net1">—</strong></div>
     <div><small>Implied trial-acquisition spend / month 1</small><strong id="calc-spend">—</strong></div>
    </div>
